@@ -1,4 +1,4 @@
-package lk.ijse.chatApp.server;
+package lk.ijse.server;
 
 import java.io.IOException;
 import java.net.ServerSocket;
