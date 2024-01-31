@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,15 +15,21 @@
             <Image url="@../images/Background.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtName" alignment="CENTER" layoutX="241.0" layoutY="361.0" prefHeight="37.0" prefWidth="236.0" style="-fx-background-color: #E4F2FB; -fx-background-radius: 10; -fx-border-color: #1880BF; -fx-border-radius: 10; -fx-border-width: 2;">
+      <TextField fx:id="txtName" alignment="CENTER" layoutX="241.0" layoutY="361.0" onAction="#txtNameOnAction" prefHeight="37.0" prefWidth="236.0" style="-fx-background-color: #E4F2FB; -fx-background-radius: 10; -fx-border-color: #1880BF; -fx-border-radius: 10; -fx-border-width: 2;">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </TextField>
       <JFXButton layoutX="308.0" layoutY="456.0" onAction="#btnSubmitOnAction" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #1880BF; -fx-background-radius: 10;" text="Submit" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
    </children>
 </AnchorPane>

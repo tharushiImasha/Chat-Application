@@ -35,4 +35,9 @@ public class LoginController {
         stage.centerOnScreen();
     }
 
+    @FXML
+    void txtNameOnAction(ActionEvent event) throws IOException {
+        btnSubmitOnAction(event);
+    }
+
 }

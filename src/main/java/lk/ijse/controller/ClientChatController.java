@@ -1,6 +1,7 @@
 package lk.ijse.controller;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
@@ -22,12 +23,13 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class ClientChatController {
     @FXML
     private Pane imgPane;
+
+    @FXML
+    private Pane emojiPane;
 
     @FXML
     private Label lblName;
@@ -57,19 +59,21 @@ public class ClientChatController {
         lblName.setText(LoginController.name);
         userName = LoginController.name;
 
+        emojiPane.setVisible(false);
+
         System.out.println(userName);
 
         new Thread(() -> {
             try {
-                Socket socket = new Socket("localhost",3002);
+                Socket socket = new Socket("localhost",5005);
 
                 bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 writer = new PrintWriter(socket.getOutputStream(),true);
 
-                writer.println("joi"+userName+"~joining");
+                writer.println("con"+userName+"~joining");
 
                 while (true){
-                    //reading response
+
                     String receive = bufferedReader.readLine();
                     String[] split = receive.split("~");
                     String name = split[0];
@@ -83,11 +87,8 @@ public class ClientChatController {
                     if (firstChars.equalsIgnoreCase("img")){
                         String[] imgs = name.split("img");
                         finalName = imgs[1];
-                    }else if(firstChars.equalsIgnoreCase("joi")){
-                        String[] imgs = name.split("joi");
-                        finalName = imgs[1];
-                    }else if(firstChars.equalsIgnoreCase("lef")){
-                        String[] imgs = name.split("lef");
+                    }else if(firstChars.equalsIgnoreCase("con")){
+                        String[] imgs = name.split("con");
                         finalName = imgs[1];
                     }
                     if (firstChars.equalsIgnoreCase("img")){
@@ -103,9 +104,8 @@ public class ClientChatController {
                                 selectedImage.setImage(imageView.getImage());
                                 imgPane.setVisible(true);
                             });
-                            //adding sender to message
+
                             Text text = new Text("\n");
-                            //text.getStyleClass().add("send-text");
 
                             //add time
                             /*DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
@@ -153,7 +153,7 @@ public class ClientChatController {
                             });
 
                             //adding sender to message
-                            Text text = new Text("\n   "+finalName+" - ");
+                            Text text = new Text("\n   "+finalName+" : ");
                             text.getStyleClass().add("receive-text");
 
                             //add time
@@ -186,7 +186,7 @@ public class ClientChatController {
                                 vBox.getChildren().add(hBox1);
                             });
                         }
-                    }else if(firstChars.equalsIgnoreCase("joi")) {
+                    }else if(firstChars.equalsIgnoreCase("con")) {
                         if (finalName.equalsIgnoreCase(userName)){
 
                             //adding name of client which join the chat
@@ -263,7 +263,7 @@ public class ClientChatController {
                             Platform.runLater(() -> {
 
                                 Label text = new Label();
-                                text.setText(" "+name +" -  " + message + "   ");
+                                text.setText(" "+name +" :  " + message + "   ");
                                 text.setMinWidth(70);
                                 text.setMaxWidth(300);
 
@@ -322,7 +322,7 @@ public class ClientChatController {
 
     @FXML
     void emojiOnAction(MouseEvent event) {
-
+        emojiPane.setVisible(!emojiPane.isVisible());
     }
 
     @FXML
@@ -334,13 +334,13 @@ public class ClientChatController {
         fileChooser.getExtensionFilters().add(imageFilter);
         file = fileChooser.showOpenDialog(txtMsg.getScene().getWindow());
         if (file != null){
-            txtMsg.setText("image selected");
+            txtMsg.setText("Image Selected");
             txtMsg.setEditable(false);
         }
     }
 
     @FXML
-    void sendOnAction(MouseEvent event) {
+    void sendOnAction(ActionEvent event) {
         if (!txtMsg.getText().isEmpty()){
             if (file != null){
                 writer.println("img"+lblName.getText()+"~"+file.getPath());
@@ -350,6 +350,47 @@ public class ClientChatController {
             txtMsg.setEditable(true);
             txtMsg.clear();
         }
+    }
+
+    @FXML
+    void txtMsgOnAction(ActionEvent event) {
+        sendOnAction(event);
+    }
+
+    @FXML
+    void angryOnAction(MouseEvent event) {
+        txtMsg.appendText("\uD83D\uDE21");
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    void heartOnAction(MouseEvent event) {
+        txtMsg.appendText("❤");
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    void lovelyOnAction(MouseEvent event) {
+        txtMsg.appendText("\uD83D\uDE0D");
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    void sadOnAction(MouseEvent event) {
+        txtMsg.appendText("\uD83D\uDE14");
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    void smileOnAction(MouseEvent event) {
+        txtMsg.appendText("\uD83D\uDE02");
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    void wowOnAction(MouseEvent event) {
+        txtMsg.appendText("\uD83D\uDE2E");
+        emojiPane.setVisible(false);
     }
 
 }
