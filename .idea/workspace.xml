@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49d29f1f-a9eb-458b-94fb-11b422f03463" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/emoji/angry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/emoji/happy-face.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/emoji/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/emoji/lovely.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/emoji/sad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/emoji/surprised.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/ClientChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/ClientChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/clientChat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/clientChat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +34,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AppInitializer.executor": "Run",
-    "Application.Appinitializer.executor": "Run",
-    "Application.Launcher.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Server.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/tharu/IdeaProjects/Chat-Application/src/main/resources/view",
-    "onboarding.tips.debug.path": "/home/tharu/IdeaProjects/Chat-Application/src/main/java/lk/ijse/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AppInitializer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Appinitializer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tharu/IdeaProjects/Chat-Application/src/main/resources/view&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/tharu/IdeaProjects/Chat-Application/src/main/java/lk/ijse/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/view" />

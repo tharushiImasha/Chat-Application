@@ -107,15 +107,6 @@ public class ClientChatController {
 
                             Text text = new Text("\n");
 
-                            //add time
-                            /*DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
-                            LocalDateTime now = LocalDateTime.now();
-                            Text time = new Text(dtf.format(now));
-                            time.getStyleClass().add("time-text");
-                            HBox timeBox = new HBox();
-                            timeBox.getChildren().add(time);
-                            timeBox.setAlignment(Pos.BASELINE_RIGHT);*/
-
                             VBox vbox = new VBox(10);
                             vbox.getChildren().addAll(text, imageView);
 
@@ -155,15 +146,6 @@ public class ClientChatController {
                             //adding sender to message
                             Text text = new Text("\n   "+finalName+" : ");
                             text.getStyleClass().add("receive-text");
-
-                            //add time
-                            /*DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
-                            LocalDateTime now = LocalDateTime.now();
-                            Text time = new Text(dtf.format(now));
-                            time.getStyleClass().add("time-text");
-                            HBox timeBox = new HBox();
-                            timeBox.getChildren().add(time);
-                            timeBox.setAlignment(Pos.BASELINE_RIGHT);*/
 
                             VBox vbox = new VBox(10);
                             vbox.getChildren().addAll(text, imageView);
@@ -229,7 +211,6 @@ public class ClientChatController {
                                 text.maxHeight(100);
                                 text.setMaxWidth(300);
 
-                                //text.setMaxHeight(300);
                                 text.setWrapText(true);
 
                                 text.setStyle("-fx-background-color: #D3D3D3;  -fx-background-radius: 10;");
@@ -267,7 +248,6 @@ public class ClientChatController {
                                 text.setMinWidth(70);
                                 text.setMaxWidth(300);
 
-                                //text.setMaxHeight(300);
                                 text.setWrapText(true);
 
                                 text.setStyle("-fx-background-color: #BAD9EC;  -fx-background-radius: 10;");
